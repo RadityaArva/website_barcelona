@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #1a1717;
+}
+
+.navbar {
+    background-color: #1b1e4b;
+    color: white;
+    padding: 1.5rem;
+    position: relative;
+    align-items: center;
+}
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #004d98, #d10707);
+    background-size: 100% 50%;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90rem;
+    margin: 0 auto;
+}
+
+.navbar-logo img {
+    position: absolute;
+    height: auto;
+    z-index: 2;
+    top: 0.1px;
+    width: 100px;
+}
+
+.navbar-links {
+    display: flex;
+    position: relative;
+    padding-left: 10rem;
+    padding-right: 5rem;
+    gap: 25px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.navbar-links a:hover {
+    color: #fcd307;
+    /* Gold color on hover */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-button {
+    background-color: #d10707;
+    /* Red background */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.navbar-button:hover {
+    background-color: #fcd307;
+    /* Change color on hover */
+    color: #1b1e4b;
+}
+
+.navbar-icon {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    padding: 1rem 5rem;
+    margin-inline: auto;
+    align-items: center;
+    flex: 1;
+}
+
+main.isi .content {
+    flex: 1;
+    display: flex;
+    margin-left: 5rem;
+    align-items: center;
+}
+
+main.isi .isi_content .judul_isi {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-top: 5.5rem;
+    margin-bottom: 1.5rem;
+}
+
+main.isi .isi_content .parag_isi {
+    line-height: 2;
+    max-width: 600px;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+main.isi .isi_content button {
+    padding: 0.5rem 1rem;
+    position: relative;
+    top: 1rem;
+    border: 3px solid transparent;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.10s ease-in-out;
+}
+
+main.isi .isi_content button:hover {
+    color: black;
+    background-color: white;
+    border: 3px solid black;
+    font-weight: 500;
+}
+
+main.isi .image_content img {
+    object-fit: cover;
+    width: 350px;
+    height: auto;
+    position: relative;
+    left: 10rem;
+    top: 4.5rem;
+}
+
+aside {
+    position: fixed;
+    top: 15%;
+    left: 95%;
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a4f;
+    color: #FDC52C;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+aside.show {
+    opacity: 1;
+}
+
+.aside-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.aside_image{
+    width: 40px;
+    height: auto;
+}
+
+.aside-link {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.footer-top {
+    display: flex;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5.5rem;
+    background: linear-gradient(to right, rgb(0, 26, 188) 50%, rgb(165, 0, 74) 50%);
+    height: 80px;
+    position: relative;
+}
+
+.barcelona-logo {
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+}
+
+.barcelona-logo img {
+    width: 60px;
+    height: 60px;
+}
+
+footer {
+    background-color: #1a1a4f;
+    color: #ffffff;
+    padding: 1rem 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    z-index: 9999;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+    /* Accent color */
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    color: #ccc;
+}
+
+.footer-section h3:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(to right, #0052a5, #d00027);
+    /* Barcelona's blue-red gradient */
+    margin: 8px auto;
+}
+
+
+/* media quare */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        /* Hide links on mobile */
+    }
+
+    .navbar-right {
+        flex-direction: column;
+    }
+}
